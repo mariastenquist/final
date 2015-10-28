@@ -1,0 +1,11 @@
+h2 {
+	color: green;
+}
+
+.pure-form.pure-form-aligned{
+  height: 750px;
+  text-align: center;
+  padding: 100px;
+  background: url("../images/road.jpg") center / cover; 
+
+}
