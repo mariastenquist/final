@@ -6,7 +6,7 @@ var multer  = require('multer');
 var upload = multer({ dest: '/public/images/avatars/' });
 
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/<nameofdatabase>')
+mongoose.connect('mongodb://localhost/mountainRide')
 
 // Create Express App Object \\
 var app = express();
@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname + '/public'));
 
-
+ 
 // Routes \\
 
 
@@ -23,10 +23,9 @@ app.get('/', function(req, res){
   res.sendFile('/html/master.html', {root : './public'})
 });
 
-app.get('/api/users', function(req, res){
-
-	res.send('This is working')
-})
+// app.get('/api/users', function(req, res){
+// 	res.send('This is working')
+// })
 
 app.use(multer())
 //req files --update profiles 
@@ -41,7 +40,7 @@ app.post('/users', function (req, res) {
   upload(req, res, function (err) {
     if (err) {
     	alert("An error occured. Please re-upload your profile picture.")
-      // seAn error occurred when uploading
+      // send an error occurred when uploading
       return
     }
     // Everything went fine

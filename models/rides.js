@@ -1,6 +1,5 @@
 //place constructor/factory/service here
 
-
 var mongoose = require('mongoose');
 
 // Define our Schema for the DB
@@ -22,9 +21,9 @@ var rideSchema = mongoose.Schema({
 
 });
 
-Ride.find({destination : req.body.destination, offer : true}, function(data){
-	res.send(data)
+// Ride.find({destination : req.body.destination, offer : true}, function(data){
+// 	res.send(data)
 })
 
 // Being modelling the collection
-module.exports = mongoose.model('ride', userSchema);
+module.exports = mongoose.model('Ride', rideSchema);

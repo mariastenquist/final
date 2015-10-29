@@ -20,4 +20,4 @@ var userSchema = mongoose.Schema({
 
 
 // Being modelling the collection
-module.exports = mongoose.model('profile', userSchema);
+module.exports = mongoose.model('Profile', userSchema);
